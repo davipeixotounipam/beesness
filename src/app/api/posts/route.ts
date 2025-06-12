@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
                   where: { followerId: userId },
                   select: { followingId: true },
                 })
-              ).map((follow) => follow.followingId),
+              ).map((follow:any) => follow.followingId),
             ],
           },
         };
